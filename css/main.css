@@ -1553,3 +1553,24 @@ body {
   -webkit-animation-play-state: paused !important;
   animation-play-state: paused !important;
 } /*# sourceMappingURL=main.css.map */
+
+#welcomeText {
+  position: fixed; /* Para que quede fijo en la pantalla */
+  top: 5%; /* Ajusta la distancia desde la parte superior */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Ajuste fino para centrar el texto */
+  font-family: "Arial", sans-serif; /* O una fuente que te guste */
+  font-size: 5vmin; /* Tamaño de la fuente, se ajusta con el tamaño de la pantalla */
+  color: white; /* Color blanco para el texto */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6); /* Efecto de brillo */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  opacity: 0; /* Inicia invisible para la animación */
+  animation: fadeInWelcome 2s forwards 1s; /* Animación de aparición */
+}
+
+@keyframes fadeInWelcome {
+  to {
+    opacity: 1; /* Hace que el texto sea visible */
+  }
+}
